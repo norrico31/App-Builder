@@ -1,0 +1,638 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #E1E1E1;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+.clearfix {
+    clear: both;
+}
+header {
+    width: 80%;
+    height: 100px;
+    margin: 0 auto;
+}
+header a h3{
+    float: left;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #353535;
+    line-height: 100px;
+}
+header nav {
+    float: right;
+}
+header nav ul {
+    display: flex;
+    position: relative;
+    line-height: 100px;
+}
+header nav ul li {
+    list-style: none;
+}
+header nav ul li a {
+    display: block;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 18px;
+    padding: 0 15px;
+    margin: 0 10px;
+    color: #353535;
+}
+header nav ul li:nth-child(6) a {
+    margin: 0 0 0 15px;
+}
+header nav ul div.active {
+    height: 3px;
+    width: 105px;
+    position: absolute;
+    background: #50509F;
+    bottom: 0px;
+    transition: transform 0.5s;
+}
+header nav ul li:nth-child(1):hover ~ .active {
+    transform: translateX(0);
+}
+header nav ul li:nth-child(2):hover ~ .active {
+    transform: translateX(120px);
+}
+header nav ul li:nth-child(3):hover ~ .active {
+    transform: translateX(246px);
+}
+header nav ul li:nth-child(4):hover ~ .active {
+    transform: translateX(390px);
+}
+header nav ul li:nth-child(5):hover ~ .active {
+    transform: translateX(548px);
+}
+header nav ul li:nth-child(6):hover ~ .active {
+    transform: translateX(700px);
+}
+article.hero section h1 {
+    font-size: 45px;
+    letter-spacing: 2px;
+    color: #353535;
+}
+article.hero section h1 span {
+    display: block;
+}
+article.hero section h3 {
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #353535;
+}
+article.hero section h3 span {
+    display: block;
+}
+article.hero section div a {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 18px;
+    background-color: #50509F;
+    outline: none;
+    overflow: hidden;
+    border: none;
+    scale: (0);
+}
+article.hero section div a:nth-child(1) {
+    color: #fff;
+    border: 2px solid #50509F;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    transition: background 0.5s ease-in-out;
+}
+article.hero section div a:hover:nth-child(1) {
+    background: transparent;
+    border: 2px solid #50509F;
+    color: #353535;
+}
+article.hero section div a:nth-child(2) {
+    background-color: transparent;
+    border: 2px solid #50509F;
+    color: #353535;
+    transition: background 0.5s ease-in-out;
+}
+article.hero section div a:hover:nth-child(2) {
+    background-color: #50509F;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+article.features section h2 {
+    font-size: 40px;
+    color: #353535;
+    position: relative;
+    margin-bottom: 70px;
+}
+article.features section {
+    margin-right: 150px;
+}
+article.features section h2:before {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    height: 2px;
+    width: 280px;
+    background-color: #F76D59;
+}
+article.features section h3 {
+    font-weight: bold;
+    color: #353535;
+    font-size: 30px;
+    margin: 20px 0;
+}
+article.features section p {
+    font-size: 20px;
+}
+article.features section p span {
+    display: block;
+}
+article.pricing {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+article.pricing h2 {
+    font-size: 40px;
+    color: #353535;
+    position: relative;
+}
+article.pricing .cardHolder {
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 100px 0;
+}
+article.pricing .cardHolder .card {
+    padding: 40px;
+    background-color: #F7F5EF;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+article.pricing .cardHolder .card h4 {
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #353535;
+    margin-bottom: 15px;
+}
+article.pricing .cardHolder .card h3 {
+    font-size: 33px;
+    color: #353535;
+    margin-bottom: 20px;
+}
+article.pricing .cardHolder .card ul {
+    text-align: left;
+    list-style: none;
+}
+article.pricing .cardHolder .card ul li {
+    margin: 5px 0;
+}
+article.pricing .cardHolder .card ul li:before {
+    content: "\2022";
+    color: #F76D59;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+article.pricing .cardHolder .card:nth-child(2) ul li:before{
+    content: "\2022";
+    color: #5555A3;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+article.pricing .cardHolder .card a {
+    text-decoration: none;
+    display: inline-block;
+    background-color: #5555A3;
+    letter-spacing: 1px;
+    color: #fff;
+    padding: 15px 50px;
+    border-radius: 30px;
+    margin-top: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    transition: background 0.5s ease-in-out;
+}
+article.pricing .cardHolder .card:nth-child(2) a {
+    background-color: #F76D59;
+}
+article.pricing .cardHolder .card a:hover {
+    background-color: rgb(45, 45, 122);
+}
+article.pricing .cardHolder .card:nth-child(2) a:hover {
+    background-color: rgb(228, 55, 29);
+}
+article.testimonials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+article.testimonials h2 {
+    color: #353535;
+    font-size: 40px;
+    margin-bottom: 100px;
+}
+article.testimonials h2 span {
+    color: #1F1F89;
+}
+article.testimonials section.cardHolder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+article.testimonials section.cardHolder section.card img {
+    margin-top: -15px;
+}
+article.testimonials section.cardHolder section.card {
+    text-align: center;
+    background-color: #4E4E9C;
+    border-radius: 25px;
+    width: 300px;
+    height: 300px;
+    padding: 50px;
+    margin: 0 15px;
+    margin-bottom: 100px;
+}
+article.testimonials section.cardHolder section.card h3,
+article.testimonials section.cardHolder section.card p {
+    color: #fff;
+    margin: 20px 0;
+}
+@media (max-width: 1430px) {
+    header {
+        width: 90%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .container {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 70px;
+        padding: 20px;
+
+    }
+    header a h3 {
+        font-size: 25px;
+    }
+    article.hero section h1 {
+        font-size: 38px;
+    }
+    article.hero section h3 {
+        font-size: 16px;
+    }
+    article.hero section:nth-child(1) img {
+        width: 425px;
+        height: 134px;
+    }
+    article.hero section img {
+        width: 550px;
+        height: 500px;
+    }
+    article.hero section div a {
+        padding: 15px;
+    }
+    article.features .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    article.features img {
+        width: 550px;
+        height: 500px;
+    }
+    article.features section h2 {
+        font-size: 35px;
+        margin-bottom: 50px;
+    }
+    article.features section h3 {
+        font-size: 25px;
+    }
+    article.pricing h2 {
+        font-size: 35px;
+    }
+    article.pricing .cardHolder {
+        margin: 70px 0;
+    }
+    article.pricing .cardHolder .card {
+        padding: 30px;
+    }
+    article.pricing .cardHolder .card a {
+        padding: 15px 45px;
+    }
+    article.pricing .cardHolder .card ul li {
+        margin-left: 15px;
+    }
+    article.testimonials {
+        margin-top: 40px;
+    }
+    article.testimonials h2 {
+        font-size: 32px;
+    }
+    article.testimonials h2 span:nth-child(2) {
+        display: block;
+    }
+    article.pricing .cardHolder{
+        justify-content: space-between;
+    }
+    article.testimonials section.cardHolder section.card {
+        padding: 30px;
+        width: 250px;
+        height: 250px;
+    }
+    article.testimonials section.cardHolder section.card img {
+        width: 50px;
+        height: 50px;
+    }
+    article.testimonials section.cardHolder section.card h3, article.testimonials section.cardHolder section.card p {
+        margin: 10px 0;
+    }
+}
+@media (max-width: 1230px)
+{
+    .container {
+        margin-top: 40px;
+    }
+    header {
+        padding: 20px;
+    }
+    header nav {
+        display: none;
+    }
+    header a h3 {
+        font-size: 28px;
+        line-height: 80px;
+    }
+    header .menu-toggle {
+        float: right;
+        display: block;
+        width: 50px;
+        height: 30px;
+        cursor: pointer;
+        margin-top: 25px;
+    }
+    header .menu-toggle div {
+        width: 50px;
+        height: 3px;
+        background-color: #353535;
+        margin: 5px 0;
+        transition: all 0.5s ease;
+    }
+    header .menu-toggle.active {
+        .line1 {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        .line2 {
+            opacity: 0;
+        }
+        .line3 {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+    }
+    header nav {
+        display: none;
+    }
+    header nav ul div.active { 
+        display: none;
+    }
+    header nav.active {
+        display: block;
+        width: 100%;
+        ul {
+            flex-direction: column;
+            li {
+                text-align: center;
+                a {
+                    font-size: 30px;
+                    margin: 0;
+                    padding: 0;
+                }
+            } 
+        }
+    }
+    article.hero section h1 {
+        font-size: 35px;
+    }
+    article.hero section h3 {
+        font-size: 18px;
+    }
+    article.hero section img {
+        width: 450px;
+        height: 400px;
+    }
+    article.features img {
+        width: 500px;
+        height: 450px;
+    }
+    article.features section {
+        margin-right: 100px;
+    }
+    article.features section h2 {
+        font-size: 32px;
+    }
+    article.features section h3 {
+        font-size: 22px;
+    }
+    
+    article.features section p {
+        font-size: 18px;
+    }
+    article.pricing h2 {
+        font-size: 32px;
+    }
+    article.pricing .cardHolder .card {
+        padding: 25px;
+    }
+    article.pricing .cardHolder .card h4 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    article.pricing .cardHolder .card h3 {
+        font-size: 28px;
+    }
+    article.pricing .cardHolder .card a {
+        padding: 12px 35px;
+    }
+    article.testimonials {
+        margin-top: 0;
+    }
+    article.testimonials h2 {
+        font-size: 28px;
+    }
+    article.testimonials section.cardHolder section.card {
+        width: 230px;
+        height: 230px;     
+    }
+}
+@media (max-width: 1060px) {
+    .container {
+        padding: 0;
+    }
+    header a h3 {
+        font-size: 23px;
+    }
+    article.hero section h1 {
+        font-size: 30px;
+    }
+    article.hero section h3 {
+        font-size: 16px;
+    }
+    article.hero section:nth-child(1) img {
+        width: 400px;
+        height: 120px;
+    }
+    article.hero section img {
+        width: 400px;
+        height: 350px;
+    }
+    article.hero section div a {
+        margin: 15px;
+    }
+    article.hero section div a:nth-child(1) {
+        margin: 15px 15px 15px 0;
+    }
+    article.features section h2 {
+        font-size: 28px;
+    }
+    article.features section h2:before {
+        width: 230px;
+    }
+    article.features section h3 {
+        font-size: 22px;
+        margin: 15px 0;
+    }
+    article.features section p {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+    article.pricing h2 {
+        font-size: 28px;
+    }
+    article.pricing .cardHolder .card {
+        padding: 20px;
+    }
+    article.pricing .cardHolder .card h3 {
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+    article.testimonials h2 {
+        font-size: 25px;
+    }
+}
+@media(max-width: 992px) {
+    header a h3 {
+        font-size: 20px;
+    }
+    article.hero section h1 {
+        font-size: 25px;
+    }
+    article.hero section img {
+        width: 350px;
+        height: 300px;
+    }
+    article.features section h2 {
+        font-size: 25px;
+    }
+    article.features img {
+        width: 450px;
+        height: 400px;
+    }
+    article.features section h3 {
+        font-size: 20px;
+    }
+    article.features section {
+        margin-right: 80px;
+    }
+    article.pricing h2 {
+        font-size: 25px;
+    }
+    article.pricing .cardHolder {
+        flex-direction: column;
+        margin: 0;
+    }
+    article.pricing .cardHolder .card {
+        padding: 50px;
+        margin: 20px 0;
+    }
+    article.pricing .cardHolder .card:nth-child(1) {
+        padding: 40px;
+        margin-top: 50px;
+    }
+    article.pricing .cardHolder .card:last-child {
+        margin-bottom: 50px;
+    }
+    article.pricing .cardHolder .card h4 {
+        font-size: 22px;
+    }
+    article.pricing .cardHolder .card h3 {
+        font-size: 28px;
+        margin: 15px 0;
+    }
+}
+@media(max-width: 870px) {
+    header {
+        padding: 10px;
+    }
+    header a h3 {
+        font-size: 18px;
+    }
+    article.hero section h1 {
+        font-size: 22px;
+    }
+    article.hero section h3 {
+        letter-spacing: 0;
+    }
+    article.hero section img {
+        width: 300px;
+        height: 250px;
+    }
+    article.hero section:nth-child(1) img {
+        width: 380px;
+        height: 125px;
+    }
+    article.features img {
+        width: 400px;
+        height: 350px;
+    }
+    article.features section {
+        margin-right: 50px;
+    }
+    article.features section h2 {
+        font-size: 22px;
+    }
+    article.features section h2:before {
+        width: 170px;
+    }
+    article.features section h3 {
+        font-size: 18px;
+    }
+    article.features section p {
+        letter-spacing: 0;
+    }
+    article.testimonials h2 {
+        font-size: 22px;
+    }
+}
